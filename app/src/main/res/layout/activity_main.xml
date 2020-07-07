@@ -11,12 +11,14 @@
         android:id="@+id/website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="enter a url" />
+        android:hint="enter a url"
+        android:inputType="textUri"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="OpenWebsite"
-        android:text="Open Website"/>
+        android:text="Open Website"
+        />
 
 </LinearLayout>

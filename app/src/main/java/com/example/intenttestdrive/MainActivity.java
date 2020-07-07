@@ -12,17 +12,16 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText mLocation, mSendText, mOpenWedsite;
+    EditText mOpenWedsite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mOpenWedsite = findViewById(R.id.website);
-        OpenWebsite();
     }
 
-    public void OpenWebsite() {
+    public void OpenWebsite(View view) {
         String url = mOpenWedsite.getText().toString();
         Uri webpage = Uri.parse(url);
         Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
@@ -33,4 +32,5 @@ public class MainActivity extends AppCompatActivity {
             Log.d("openwebsite","can't open website");
         }
     }
+
 }
